@@ -1,0 +1,12 @@
+CREATE TABLE users
+(
+    userId UUID PRIMARY KEY NOT NULL DEFAULT uuid_generate_v4(),
+    login VARCHAR(20) NOT NULL UNIQUE,
+    email VARCHAR(20) NOT NULL UNIQUE,
+    firstName VARCHAR(255) NOT NULL UNIQUE,
+    lastName VARCHAR(255) NOT NULL UNIQUE,
+    phone VARCHAR(20) NOT NULL UNIQUE,
+    passwordHash VARCHAR(255) NOT NULL,
+    passwordSalt VARCHAR(255) NOT NULL
+);
+
